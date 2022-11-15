@@ -20,42 +20,47 @@ import org.json.simple.JSONArray;
 public class Open_API_test {
 
 	public static void main(String[] args) throws IOException{
-		// TODO Auto-generated method stub
-//		String subway_num = "1713";
-//		String day = "1";	
-//		String dest = "1";	
-//		StringBuilder urlBuilder = new StringBuilder("http://openapi.seoul.go.kr:8088");
-//		urlBuilder.append("/" + URLEncoder.encode("696c47547274686532354b4e617755","UTF-8") );
-//		urlBuilder.append("/" + URLEncoder.encode("JSON","UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode("SearchSTNTimeTableByIDService","UTF-8")); 
-//		urlBuilder.append("/" + URLEncoder.encode("1","UTF-8")); 
-//		urlBuilder.append("/" + URLEncoder.encode("5","UTF-8")); 
-//		urlBuilder.append("/" + URLEncoder.encode(subway_num,"UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode(day,"UTF-8"));
-//		urlBuilder.append("/" + URLEncoder.encode(dest,"UTF-8"));
-		StringBuilder ssbb = callingApi("1", "5", "1713", "1", "1");
-		StringBuilder total_context = new StringBuilder(); 
-//		URL url = new URL(urlBuilder.toString());
-//		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-//		conn.setRequestMethod("GET");
-//		conn.setRequestProperty("Content-type", "application/xml");
-//		System.out.println("Response code: " + conn.getResponseCode()); 
-//		BufferedReader rd;
-//		
-//		// 서비스코드가 정상이면 200~300사이의 숫자가 나옵니다.
-//		if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
-//			rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-//		} else {
-//			rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
-//		}
-//		StringBuilder sb = new StringBuilder();
-//		String line;
-//		while ((line = rd.readLine()) != null) {
-//			sb.append(line);
-//		}
+/*
+		String subway_num = "1713";
+		String day = "1";	
+		String dest = "1";	
+		StringBuilder urlBuilder = new StringBuilder("http://openapi.seoul.go.kr:8088");
+		urlBuilder.append("/" + URLEncoder.encode("696c47547274686532354b4e617755","UTF-8") );
+		urlBuilder.append("/" + URLEncoder.encode("JSON","UTF-8"));
+		urlBuilder.append("/" + URLEncoder.encode("SearchSTNTimeTableByIDService","UTF-8")); 
+		urlBuilder.append("/" + URLEncoder.encode("1","UTF-8")); 
+		urlBuilder.append("/" + URLEncoder.encode("5","UTF-8")); 
+		urlBuilder.append("/" + URLEncoder.encode(subway_num,"UTF-8"));
+		urlBuilder.append("/" + URLEncoder.encode(day,"UTF-8"));
+		urlBuilder.append("/" + URLEncoder.encode(dest,"UTF-8"));
+
+		URL url = new URL(urlBuilder.toString());
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		conn.setRequestMethod("GET");
+		conn.setRequestProperty("Content-type", "application/xml");
+		System.out.println("Response code: " + conn.getResponseCode()); 
+		BufferedReader rd;
 		
-		// json parsing 
-		//total_context.append(ssbb);   // 전체 내용 넣기 
+		// 서비스코드가 정상이면 200~300사이의 숫자가 나옵니다.
+		if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
+			rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		} else {
+			rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+		}
+		StringBuilder sb = new StringBuilder();
+		String line;
+		while ((line = rd.readLine()) != null) {
+			sb.append(line);
+		}
+		
+		json parsing 
+		total_context.append(ssbb);   // 전체 내용 넣기 
+		 */
+		
+		
+		StringBuilder ssbb = callingApi("1", "5", "1713", "1", "1");
+		StringBuilder total_context = new StringBuilder();
+		
 		String result = ssbb.toString();
 		JSONParser jsonParser = new JSONParser();
 		long total_count = 0;
@@ -92,6 +97,11 @@ public class Open_API_test {
 		}catch(FileNotFoundException e) {
 			System.out.println("해당 파일 없음");
 		}
+		
+		TimeDB tdb = new TimeDB();
+		tdb.update("insert into student......");
+		tdb.select("select * from student");
+		
 		
 	}
 	
