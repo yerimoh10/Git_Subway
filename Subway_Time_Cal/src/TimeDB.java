@@ -18,6 +18,7 @@ public class TimeDB {
 		try {
 			Class.forName("org.gjt.mm.mysql.Driver");
 			this.conn = java.sql.DriverManager.getConnection(url, user, password);
+			System.out.println("db 연결!");
 		} catch (Exception e) {
 			System.out.println("connection error: " + e);
 		}
