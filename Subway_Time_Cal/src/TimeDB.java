@@ -11,13 +11,14 @@ public class TimeDB {
 	}
 	
 	void connect() {
-		String url = "jdbc:mysql://localhost:3306/javadb"; 
+		String url = "jdbc:mysql://localhost:3306/subway"; 
 		String user = "root";
 		String password = "6574";
 		
 		try {
 			Class.forName("org.gjt.mm.mysql.Driver");
 			this.conn = java.sql.DriverManager.getConnection(url, user, password);
+			this.stmt = conn.createStatement();
 			System.out.println("db 연결!");
 		} catch (Exception e) {
 			System.out.println("connection error: " + e);

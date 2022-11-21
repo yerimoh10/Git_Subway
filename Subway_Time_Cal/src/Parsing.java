@@ -7,6 +7,7 @@ public class Parsing {
 	JSONObject jsonObject;
 	JSONParser jsonParser = new JSONParser();
 	long total_count = 0;
+	TimeDB tdb = new TimeDB(); //
 	
 	String stat_cd = "";	// 역코드 - int 
 	String stat_nm = ""; // 역이름
@@ -38,8 +39,8 @@ public class Parsing {
 		JSONObject jsonObject1 = (JSONObject)jsonParser.parse(json_contents);
 		JSONObject timeTable = (JSONObject)jsonObject1.get("SearchSTNTimeTableByIDService");
 		//JSONObject total_count = (JSONObject)timeTable.get("list_total_count");
-		total_count = (long) timeTable.get("list_total_count");
-		System.out.println("totalcount: " + total_count);
+		//total_count = (long) timeTable.get("list_total_count");
+		//System.out.println("totalcount: " + total_count);
 		JSONArray rows = (JSONArray)timeTable.get("row");
 		for(int i = 0; i< rows.size(); i++) {
 			JSONObject row_contents = (JSONObject)rows.get(i);
@@ -63,12 +64,11 @@ public class Parsing {
 	
 	void printing() {
 		
-		//TimeDB tdb = new TimeDB(); //
-		String query = String.format("insert into FIXEDTIME_TBL values(%s,'%s', '%s', '%s', '%s','%s', %s, %s, %s, %s, '%s');", 
+		String query = String.format("insert into FIXEDTIME_TBL values(null, %s,'%s', '%s', '%s', '%s', '%s', %s, %s, %s, %s, '%s');", 
 				stat_cd,stat_nm,line_num, train_no, arrive_time, left_time, origin, destination, week, inout, express);
 		System.out.println(query);
 		// db에 저장하면 됨!
-		//tdb.update(query);
+		tdb.update(query);
 		//tdb.select("select * from student");
 	}
 	
