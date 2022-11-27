@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<HTML lang="KO">
+
+<HEAD>
+    <META charset="UTF-8">
+    <TITLE></TITLE>
+    <SCRIPT language="JavaScript">
+        function select_station(stat) {
+            var a = document.getElementById("select-panel").style.width;
+            document.getElementById("select-panel").innerHTML = stat.getAttribute("class").slice(4) + "번째 역을 클릭했습니다."; //a.slice(0, -2);
+            document.getElementById("select-panel").style.left = String( Number(stat.getAttribute("cx")) - Number(a.slice(0, -2))/2) + "px";
+            document.getElementById("select-panel").style.top = stat.getAttribute("cy") + "px";
+        }
+    </SCRIPT>
+    <link rel="stylesheet" href="./css/main.css">
+</HEAD>
+
+<BODY>
+    <header>
+        <div><a href="main.html"><img id="header_img" src="./img/logo1.png"></a></div>
+    </header>
+    <div id="wrap_main">
+        <TABLE border="1" width="100%" height="100%">
+            <TR>
+                <TD>
+                    <TABLE border="1">
+                        <TR>
+                            <TD>
+                                <p style="
+                                background-image: url('subway_map.png');
+                                background-repeat: no-repeat;
+                            ">
+                                    <DIV id="select-panel" style="width: 250px; left: -1000px; top: -1000px; display: block;">말풍선</DIV>
+                                    <SVG height="600" width="900">
+                                        <G stroke="blue" stroke-linejoin="round" stroke-linecap="round">
+                                            <PATH class="path 1 2" d="M100 500 H150" stroke-width="10"></PATH>
+                                            <PATH class="path 2 3" d="M150 500 H200" stroke-width="10"></PATH>
+                                            <PATH class="path 3 4" d="M200 500 H250" stroke-width="10"></PATH>
+                                            <PATH class="path 4 5" d="M250 500 H300" stroke-width="10"></PATH>
+                                            <PATH class="path 5 6" d="M300 500 H350" stroke-width="10"></PATH>
+                                            <PATH class="path 6 7" d="M350 500 H400" stroke-width="10"></PATH>
+                                            <PATH class="path 7 8" d="M400 500 H450" stroke-width="10"></PATH>
+                                            <PATH class="path 8 9" d="M450 500 H500" stroke-width="10"></PATH>
+                                            <PATH class="path 9 10" d="M500 500 H550" stroke-width="10"></PATH>
+                                            <PATH class="path 10 11" d="M550 500 H600" stroke-width="10"></PATH>
+                                            <PATH class="path 11 12" d="M600 500 H650" stroke-width="10"></PATH>
+                                            <PATH class="path 12 13" d="M650 500 H700" stroke-width="10"></PATH>
+                                            <PATH class="path 13 14" d="M700 500 H750" stroke-width="10"></PATH>
+                                            <PATH class="path 14 15" d="M750 500 H800" stroke-width="10"></PATH>
+                                        </G>
+                                        <CIRCLE class="sta 1" cx="100" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 2" cx="150" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 3" cx="200" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 4" cx="250" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 5" cx="300" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 6" cx="350" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 7" cx="400" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 8" cx="450" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 9" cx="500" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 10" cx="550" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 11" cx="600" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 12" cx="650" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 13" cx="700" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 14" cx="750" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                        <CIRCLE class="sta 15" cx="800" cy="500" r="10" stroke="blue" stroke-width="5"
+                                            fill="white" onclick="select_station(this)"></CIRCLE>
+                                    </SVG>
+                                </p>
+                            </TD>
+                        </TR>
+                    </TABLE>
+                </TD>
+                <TD valign="top">
+                    <TABLE border="1" width="500">
+                        <TR>
+                            <TD bgcolor="#AFEEEE">
+                                <A href="login.html">
+                                    <DIV align="center" style="display: block; padding: 10px;">
+                                        <FONT size="6em">로그인</FONT>
+                                    </DIV>
+                                </A>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD bgcolor="#4682B4" style="padding: 5px;">
+                                <FONT size="5em">즐겨찾기</FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD>
+                                <TABLE border="1" width="100%" height="40%">
+                                    <TR>
+                                        <TD bgcolor="LightSteelBlue">
+                                            수원역<BR>
+                                            천안역<BR>
+                                            두정역
+                                        </TD>
+                                    </TR>
+                                </TABLE>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD bgcolor="#4682B4" style="padding: 5px;">
+                                <FONT size="5em">메모</FONT>
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD>
+                                <TABLE border="1" width="100%" height="40%">
+                                    <TR>
+                                        <TD bgcolor="LightSteelBlue">
+                                            수원역에서 ■호선으로 보다 빨리 갈아타기 위해서는 ■-■ 번째 열차 입구에서 내려야 한다.
+                                        </TD>
+                                    </TR>
+                                </TABLE>
+                            </TD>
+                        </TR>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+</BODY>
+
+</HTML>
