@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    background-color: rgb(229, 236, 241);
+    background-color: rgb(2, 71, 120);
+}
+
+header div{
+    margin-left: 70px;
+    width: 180px;
+    margin-top: 5px;
+}
+
+header #header_img{
+    width: 100%;
+}
+
+/*  */
+
+#wrap_login {
+    width: 800px;
+    margin: 200px auto;
+}
+
+/*  */
+
+#welcome_text {
+    margin: 30px auto;
+    text-align: center;
+}
+
+#welcome_text1 {
+    font-size: 1.7em;
+}
+#welcome_text2 {
+    padding-top: 10px;
+    font-size: 1em;
+}
+
+/*  */
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#login_inputDiv {
+    width: 355px; /**/
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#login_inputDiv div {
+    margin: 0 auto;
+}
+
+#login_inputDiv input {
+    width: 350px; /**/
+    height: 45px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#submit_div{
+    padding-top: 10px;
+}
+
+#login_input{
+    font-size: 1em;
+}
+
+#login_input:hover{
+    background-color: rgb(88,88,88);
+    color: white;
+    font-size: 1em;
+}
+
+/*  */
+
+#cancle_login {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+#cancle_login div{
+    text-align:right;
+}
+
+#cancle_login a{
+    font-size: 0.9em;
+    text-decoration: none;
+    color: black;
+    text-align:right;
+}
+
+#cancle_login a:hover{
+    text-decoration: underline;
+    font-weight: 600;
+}

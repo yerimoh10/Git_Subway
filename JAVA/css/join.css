@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    background-color: rgb(229, 236, 241);
+    background-color: rgb(2, 71, 120);
+}
+
+header div{
+    margin-left: 70px;
+    width: 180px;
+    margin-top: 5px;
+}
+
+header #header_img{
+    width: 100%;
+}
+
+/*  */
+
+#wrap_join {
+    width: 800px;
+    margin: 150px auto;
+}
+
+/*  */
+
+#welcome_text {
+    margin: 30px auto;
+    text-align: center;
+}
+
+#join_text1 {
+    font-size: 1.7em;
+}
+
+/*  */
+
+#join_form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#join_inputDiv {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#join_inputDiv div {
+
+    margin: 0 auto;
+}
+
+#join_inputDiv input:not(#idCheck_btn) {
+    width: 300px;
+    height: 40px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#submit_div{
+    padding-top: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#submit_div input:hover{
+    background-color: rgb(88,88,88);
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/*  */
+
+#idCheck_div{
+   text-align: end;
+}
+
+#idCheck_btn{
+    width: 100px;
+    height: 30px;
+}
+
+/*  */
+
+#reset_join {
+  text-align: end;
+  padding: 0 10px;
+}
+
+#reset_join a{
+    text-decoration: none;
+    color: black;
+}
+
+#reset_join a:hover{
+    text-decoration: underline;
+    font-weight: 600;
+}
